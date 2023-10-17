@@ -21,4 +21,7 @@ public class PentagonalPrism extends shapes{
 	public double PentagonRadius() {
 		return (edge/2)/Math.tan(36);
 	}
+	public double ReturnBaseArea() {
+		return (ReturnBase());
+	}
 }

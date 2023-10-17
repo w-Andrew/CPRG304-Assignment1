@@ -1,20 +1,21 @@
-package shape;
+package shapes;
+
 public class Cylinder extends shapes {
 	
 	double radius;
 
 	public Cylinder(double height, double radius) {
-		super(height);
+		this.height = height;
 		this.radius = radius;
 	}
 
 	@Override
-	public double calcVolume() {
+	public double ReturnVolume() {
 		return Math.PI * radius * radius * height;
 	}
 
 	@Override
-	public double calcBaseArea() {
+	public double ReturnBaseArea() {
 		return Math.PI * radius * radius;
 	}
 
