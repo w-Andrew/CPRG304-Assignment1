@@ -3,10 +3,8 @@ package shapes;
 public abstract class shapes {
 	double height;
 	
-	public double ReturnSurfaceArea() {
-		return 0;
-	}
-	public double ReturnVolume() {
-		return 0;
-	}
+	public abstract double ReturnSurfaceArea();
+	public abstract double ReturnVolume();
+	
+	
 }
