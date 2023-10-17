@@ -1,20 +1,20 @@
 package shapes;
 
-public class TriangularPrism {
-	int height;
-	int edge;
+public class TriangularPrism extends shapes{
+	double height;
+	double edge;
 	
-	public TriangularPrism(int theHeight, int edgeLenght) {
+	public TriangularPrism(double theHeight, double edgeLenght) {
 		this.height = theHeight;
 		this.edge = edgeLenght;
 	}
-	public int ReturnVolume() {
+	public double ReturnVolume() {
 		return this.ReturnBase()*height;
 	}
-	public int ReturnSurfaceArea() {
+	public double ReturnSurfaceArea() {
 		return 2*(this.ReturnBase()) + 3*(edge*height);
 	}
-	public int ReturnBase() {
+	public double ReturnBase() {
 		return (edge*edge)/2;
 	}
 }

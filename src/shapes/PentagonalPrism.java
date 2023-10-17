@@ -1,7 +1,7 @@
 package shapes;
 import java.lang.Math;
 
-public class PentagonalPrism {
+public class PentagonalPrism extends shapes{
 	double height;
 	double edge;
 	

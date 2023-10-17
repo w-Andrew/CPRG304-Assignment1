@@ -1,20 +1,20 @@
 package shapes;
 
-public class SquarePrism {
-	int height;
-	int edge;
+public class SquarePrism extends shapes{
+	double height;
+	double edge;
 	
-	public SquarePrism(int theHeight, int edgeLenght) {
+	public SquarePrism(double theHeight, double edgeLenght) {
 		this.height = theHeight;
 		this.edge = edgeLenght;
 	}
-	public int ReturnVolume() {
+	public double ReturnVolume() {
 		return this.ReturnBase()*height;
 	}
-	public int ReturnSurfaceArea() {
+	public double ReturnSurfaceArea() {
 		return 2*(this.ReturnBase()) + 4*(edge*height);
 	}
-	public int ReturnBase() {
+	public double ReturnBase() {
 		return edge*edge;
 	}
 
