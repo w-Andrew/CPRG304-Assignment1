@@ -36,10 +36,13 @@ public class CommandLine {
 		if(sortby == null) {
 			System.out.println("You have not enter a value to sort by, use -t and immediately follow by 'b' 'h' or 'a' ex '-th'");
 		}
+		
+		System.out.println(filePath);
+		
 		//Initialize the array of object here
 		
 		//based on selected method use if else to take, also time it
 		
-		//if ethior one of them does not match, print error here, else print I think
+		//if either one of them does not match, print error here, else print I think
 	}
 }
