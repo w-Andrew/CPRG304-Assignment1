@@ -11,7 +11,6 @@ public class CommandLine {
 		if(args.length < 3) {
 			System.out.println("This program need 3 inputs");
 		}
-		//String text = args[0];
 		for(String arg : args) {
 			char ch = arg.charAt(0);
 			char ch2 = arg.charAt(1);
@@ -31,5 +30,16 @@ public class CommandLine {
 		if(filePath == null) {
 			System.out.println("You need to use -f and then file name or path inorder to use this program.");
 		}
+		if(method == null) {
+			System.out.println("You did not entered a sorting algorthim to sort by, please use -s and immediately follow by 'b','s','i','m','q' or 'z' ex'-sz'");
+		}
+		if(sortby == null) {
+			System.out.println("You have not enter a value to sort by, use -t and immediately follow by 'b' 'h' or 'a' ex '-th'");
+		}
+		//Initialize the array of object here
+		
+		//based on selected method use if else to take, also time it
+		
+		//if ethior one of them does not match, print error here, else print I think
 	}
 }
