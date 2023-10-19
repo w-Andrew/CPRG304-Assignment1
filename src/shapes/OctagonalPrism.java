@@ -3,11 +3,10 @@ package shapes;
 public class OctagonalPrism extends shapes {
     private double height;
     private double side;
-	private double s;
-
-    public OctagonalPrism(double height, double side) {
+    
+	public OctagonalPrism(double height, double sideLength) {
         this.height = height;
-        this.s = side;
+        this.side = sideLength;
     }
 
     public double getBaseArea() {
