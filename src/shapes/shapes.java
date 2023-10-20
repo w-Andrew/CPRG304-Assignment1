@@ -11,4 +11,7 @@ public abstract class shapes implements Comparable<shapes> {
 		return 0;
 	}
 
+	public double getHeight() {
+		return height;
+	}
 }

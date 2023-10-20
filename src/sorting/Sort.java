@@ -16,9 +16,12 @@ public class Sort {
 			System.out.println(s[i]);
 		}
 		SortingUtility su = new SortingUtility();
-		su.mergeSort(s);
 		for (int i = 0; i < s.length; i++) {
-			System.out.println(s[i]);
+			System.out.println(s[i].getHeight());
+		}
+		su.insertionSort(s);
+		for (int i = 0; i < s.length; i++) {
+			System.out.println(s[i].getHeight());
 		}
 	}
 

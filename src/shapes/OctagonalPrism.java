@@ -25,8 +25,14 @@ public class OctagonalPrism extends shapes {
 	}
 
 	@Override
+	public double getHeight() {
+		return this.height;
+	}
+
+	@Override
 	public int compareTo(shapes o) {
 		// TODO Auto-generated method stub
-		return (int) (this.height - o.height);
+		return (int) (this.height - o.getHeight());
 	}
+
 }
