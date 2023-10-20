@@ -12,7 +12,12 @@ public class Sort {
 		// TODO Auto-generated method stub
 		String test = "G:\\temp\\polyNameBIG.txt";
 		shapes s[] = getShapes(test);
-		for (int i = 0; i < s.length; i += 1000) {
+		for (int i = 0; i < s.length; i++) {
+			System.out.println(s[i]);
+		}
+		SortingUtility su = new SortingUtility();
+		su.mergeSort(s);
+		for (int i = 0; i < s.length; i++) {
 			System.out.println(s[i]);
 		}
 	}
@@ -42,21 +47,31 @@ public class Sort {
 
 			switch (shapeType) {
 			case ("Cone"):
+				shapeArray[i] = new Cone(height, width);
 				break;
 
 			case ("Cylinder"):
+				shapeArray[i] = new Cylinder(height, width);
 				break;
 
 			case ("PentagonalPrism"):
 				shapeArray[i] = new PentagonalPrism(height, width);
 				break;
 
-			case ("TringularPrism"):
+			case ("TriangularPrism"):
 				shapeArray[i] = new TriangularPrism(height, width);
 				break;
 
 			case ("SquarePrism"):
 				shapeArray[i] = new SquarePrism(height, width);
+				break;
+
+			case ("OctagonalPrism"):
+				shapeArray[i] = new OctagonalPrism(height, width);
+				break;
+
+			case ("Pyramid"):
+				shapeArray[i] = new Pyramid(height, width);
 				break;
 			}
 
