@@ -1,6 +1,7 @@
 package shapes;
 
 public class OctagonalPrism extends shapes {
+
 	private double height;
 	private double side;
 
@@ -28,5 +29,4 @@ public class OctagonalPrism extends shapes {
 		// TODO Auto-generated method stub
 		return (int) (this.height - o.height);
 	}
-
 }
