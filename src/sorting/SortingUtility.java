@@ -87,6 +87,17 @@ public class SortingUtility {
 			k++;
 
 		} while (i < lower.length && j < higher.length);
+
+		while (i < lower.length) {
+			arr[k] = lower[i];
+			i++;
+			k++;
+		}
+		while (j < higher.length) {
+			arr[k] = higher[j];
+			j++;
+			k++;
+		}
 	}
 
 	public static <T extends Comparable<T>> void quickSort(T[] arr) {
