@@ -6,5 +6,6 @@ public abstract class shapes {
 	public abstract double ReturnBaseArea();
 	public abstract double ReturnVolume();
 	
-	
+	//Need to add compare and compareTO
+	//public abstract int compare();
 }

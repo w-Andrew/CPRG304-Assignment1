@@ -8,8 +8,10 @@ public class CommandLine {
 		File filePath = null;//so it does not cause undefined error or something
 		String sortby = null;//What to sort by, v, h, base
 		String method = null;//What sorting method to use
-		if(args.length < 3) {
-			System.out.println("This program need 3 inputs");
+		if(args.length != 3) {
+			System.out.println("This program need 3 inputs, example 'java -jar sort.jar -ffile_name -tv -sb'");
+			System.out.print("You used ");
+			System.out.println(args.length);
 		}
 		for(String arg : args) {
 			char ch = arg.charAt(0);
