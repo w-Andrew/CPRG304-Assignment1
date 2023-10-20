@@ -42,9 +42,15 @@ public class CommandLine {
 		System.out.println(filePath);
 		
 		//Initialize the array of object here
-		
+		long startTime = System.nanoTime();
 		//based on selected method use if else to take, also time it
 		
-		//if either one of them does not match, print error here, else print I think
+			//if either one of them does not match, print error here, else print I think
+		
+		//if it is all good
+		long endTime = System.nanoTime();
+		long duration = (endTime - startTime);
+		System.out.print("Total time taken is ");
+		System.out.println(Long.toString(duration));
 	}
 }
