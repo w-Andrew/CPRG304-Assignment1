@@ -58,7 +58,6 @@ public class SortingUtility {
 	}
 
 	public <T extends Comparable<T>> void mergeSort(T[] arr) {
-		System.out.println("we are inside deconstructing :O " + arr.length);
 		if (arr.length > 1) {
 			int mid = arr.length / 2;
 
@@ -74,7 +73,6 @@ public class SortingUtility {
 	}
 
 	public static <T extends Comparable<T>> void merge(T[] arr, T[] lower, T[] higher) {
-		// System.out.println("Merging: " + (lower.length + higher.length));
 		int i = 0;
 		int j = 0;
 		int k = 0;
