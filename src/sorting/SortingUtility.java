@@ -28,11 +28,11 @@ public class SortingUtility {
 
 	public static <T extends Comparable<T>> void insertionSort(T[] arr) {
 		int n = arr.length;
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i < n; i++) {
 			T key = arr[i];
-			int j = i + 1;
+			int j = i - 1;
 
-			while (j >= 0 && arr[j].compareTo(key) > 0) {
+			while (j >= 0 && arr[j].compareTo(key) < 0) {
 				arr[j + 1] = arr[j];
 				j--;
 			}
@@ -45,15 +45,15 @@ public class SortingUtility {
 		int n = arr.length;
 
 		for (int i = 0; i < n - 1; i++) {
-			int min = i;
+			int max = i;
 			for (int j = i + 1; j < n; j++) {
-				if (arr[j].compareTo(arr[min]) < 0) {
-					min = j;
+				if (arr[j].compareTo(arr[max]) > 0) {
+					max = j;
 				}
 			}
 			T temp = arr[i];
-			arr[i] = arr[min];
-			arr[min] = temp;
+			arr[i] = arr[max];
+			arr[max] = temp;
 		}
 	}
 
