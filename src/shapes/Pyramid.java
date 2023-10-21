@@ -20,13 +20,14 @@ public class Pyramid extends shapes {
 	@Override
 	public double getHeight() {
 		return this.height;
-
+	}
+	
 	@Override
 	public double ReturnVolume() {
 		return (side * side * height) / 3;
 	}
 
-	@Override
+	//@Override
 	public double ReturnBaseArea() {
 		return side * side;
 

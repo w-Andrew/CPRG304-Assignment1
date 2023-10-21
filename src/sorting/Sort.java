@@ -30,7 +30,7 @@ public class Sort {
 		}
 	}
 
-	private static shapes[] getShapes(String filePath) {
+	public static shapes[] getShapes(String filePath) {
 		//
 		File file = new File(filePath);
 		Scanner read = null;
