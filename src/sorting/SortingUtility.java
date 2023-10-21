@@ -2,6 +2,8 @@ package sorting;
 
 import java.util.Arrays;
 
+import shapes.shapes;
+
 public class SortingUtility {
 
 	public static <T extends Comparable<T>> void bubbleSort(T[] arr) {
@@ -57,7 +59,7 @@ public class SortingUtility {
 		}
 	}
 
-	public <T extends Comparable<T>> void mergeSort(T[] arr) {
+	public <T extends shapes> void mergeSort(T[] arr) {
 		if (arr.length > 1) {
 			int mid = arr.length / 2;
 
@@ -72,7 +74,7 @@ public class SortingUtility {
 		}
 	}
 
-	public static <T extends Comparable<T>> void merge(T[] arr, T[] lower, T[] higher) {
+	public static <T extends shapes> void merge(T[] arr, T[] lower, T[] higher) {
 		int i = 0;
 		int j = 0;
 		int k = 0;
@@ -100,7 +102,7 @@ public class SortingUtility {
 		}
 	}
 
-	public static <T extends Comparable<T>> void quickSort(T[] arr, int low, int high) {
+	public static <T extends shapes> void quickSort(T[] arr, int low, int high) {
 		// if this is met we can no longer split the array
 		if (high <= low) {
 			return;
@@ -116,7 +118,7 @@ public class SortingUtility {
 
 	}
 
-	public static <T extends Comparable<T>> int partition(T[] arr, int low, int high) {
+	public static <T extends shapes> int partition(T[] arr, int low, int high) {
 		// grab last index as pivot
 		T pivot = arr[high];
 		int i = low - 1;

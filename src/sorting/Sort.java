@@ -23,7 +23,8 @@ public class Sort {
 		// su.insertionSort(s);
 		// su.selectionSort(s);
 		// su.mergeSort(s);
-		su.quickSort(s, 0, s.length - 1);
+		// su.quickSort(s, 0, s.length - 1);
+		System.out.println("done");
 		for (int i = 0; i < s.length; i++) {
 			System.out.println(s[i].getHeight());
 		}
