@@ -25,4 +25,17 @@ public class Pyramid extends shapes {
 		return (int) (this.height - o.getHeight());
 	}
 
+	public double compare(String type, shapes o) {
+		double result = 0;
+
+		switch (type) {
+		case ("v"):
+			result = this.ReturnVolume() - o.ReturnVolume();
+			break;
+		case ("a"):
+			result = this.ReturnSurfaceArea() - o.ReturnSurfaceArea();
+			break;
+		}
+		return result;
+	}
 }

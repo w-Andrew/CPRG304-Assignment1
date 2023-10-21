@@ -100,8 +100,46 @@ public class SortingUtility {
 		}
 	}
 
-	public static <T extends Comparable<T>> void quickSort(T[] arr) {
+	public static <T extends Comparable<T>> void quickSort(T[] arr, int low, int high) {
+		// if this is met we can no longer split the array
+		if (high <= low) {
+			return;
+		}
 
+		// sort array with and return the used pivot index
+		int pivot = partition(arr, low, high);
+
+		// call quicksort again while not sorting our pivot which is in the correct
+		// location
+		quickSort(arr, low, pivot - 1);
+		quickSort(arr, pivot + 1, high);
+
+	}
+
+	public static <T extends Comparable<T>> int partition(T[] arr, int low, int high) {
+		// grab last index as pivot
+		T pivot = arr[high];
+		int i = low - 1;
+
+		// sort vs pivot
+		for (int j = low; j <= high; j++) {
+			if (arr[j].compareTo(pivot) > 0) {
+				i++;
+				// swap
+				T temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+		i++;
+
+		// put pivot in it's correct spot
+		T temp = arr[i];
+		arr[i] = arr[high];
+		arr[high] = temp;
+
+		// return index of pivot
+		return i;
 	}
 
 	public static <T extends Comparable<T>> void customSort(T[] arr) {
