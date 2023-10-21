@@ -19,7 +19,11 @@ public class Sort {
 		for (int i = 0; i < s.length; i++) {
 			System.out.println(s[i].getHeight());
 		}
-		su.mergeSort(s);
+		// su.bubbleSort(s);
+		// su.insertionSort(s);
+		// su.selectionSort(s);
+		// su.mergeSort(s);
+		su.quickSort(s, 0, s.length - 1);
 		for (int i = 0; i < s.length; i++) {
 			System.out.println(s[i].getHeight());
 		}
