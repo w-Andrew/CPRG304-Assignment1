@@ -14,7 +14,7 @@ public class SortingUtility {
 			swapped = false;
 
 			for (int j = 0; j < n - i - 1; j++) {
-				if (arr[j].compareTo(arr[j + 1]) > 0) {
+				if (arr[j].compareTo(arr[j + 1]) < 0) {
 					T temp = arr[j];
 					arr[j] = arr[j + 1];
 					arr[j + 1] = temp;
@@ -49,7 +49,7 @@ public class SortingUtility {
 		for (int i = 0; i < n - 1; i++) {
 			int min = i;
 			for (int j = i + 1; j < n; j++) {
-				if (arr[j].compareTo(arr[min]) < 0) {
+				if (arr[j].compareTo(arr[min]) > 0) {
 					min = j;
 				}
 			}
