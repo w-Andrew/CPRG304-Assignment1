@@ -9,16 +9,16 @@ public class OctagonalPrism extends shapes {
         this.side = sideLength;
     }
 
-    public double getBaseArea() {
+    public double ReturnBaseArea() {
         return 2 * side * side * (1 + Math.sqrt(2));
     }
 
-    public double getVolume() {
-        return getBaseArea() * height;
+    public double ReturnVolume() {
+        return ReturnBaseArea() * height;
     }
 
     public double getSurfaceArea() {
-        double baseArea = getBaseArea();
+        double baseArea = ReturnBaseArea();
         double lateralArea = 8 * side * height;
         return 2 * baseArea + lateralArea;
     }
