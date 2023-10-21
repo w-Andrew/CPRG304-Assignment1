@@ -19,6 +19,11 @@ public class TriangularPrism extends shapes {
 		return 2 * (this.ReturnBase()) + 3 * (edge * height);
 	}
 
+  //duplicate function, here incase it breaks something, otherwise delete
+	public double ReturnBaseArea() {
+		return (edge*edge)/2;
+	}
+  
 	public double ReturnBase() {
 		return (edge * edge) / 2;
 	}

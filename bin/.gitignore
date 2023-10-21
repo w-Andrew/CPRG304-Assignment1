@@ -1,5 +1,8 @@
 /.classpath
 /.project
+/util/
 /shapes/
 /sorting/
 /test/
+/.settings/
+/Sorts/

@@ -15,6 +15,7 @@ public class Cylinder extends shapes {
 	 */
 	public Cylinder(double height, double radius) {
 		// TODO Auto-generated constructor stub
+
 		this.height = height;
 		this.radius = radius;
 	}
@@ -32,6 +33,11 @@ public class Cylinder extends shapes {
 	@Override
 	public double getHeight() {
 		return this.height;
+	}
+
+	@Override//Probably not needed
+	public double ReturnBaseArea() {
+		return Math.PI * radius * radius;
 	}
 
 }

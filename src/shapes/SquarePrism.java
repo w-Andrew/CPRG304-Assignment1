@@ -18,7 +18,12 @@ public class SquarePrism extends shapes {
 	public double ReturnSurfaceArea() {
 		return 2 * (this.ReturnBase()) + 4 * (edge * height);
 	}
-
+  
+  //Probably duplicate function, leaving for now
+	public double ReturnBaseArea() {
+		return ReturnBase();
+	}
+  
 	public double ReturnBase() {
 		return edge * edge;
 	}

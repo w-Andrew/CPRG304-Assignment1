@@ -1,5 +1,6 @@
 package shapes;
 
+
 /**
  * Class description:
  *
@@ -25,12 +26,18 @@ public class Cone extends shapes {
 
 	@Override
 	public double ReturnVolume() {
+    // TODO Auto-generated method stub
 		return (Math.PI * Math.pow(radius, 2) * (this.height / 3));
 	}
 
 	@Override
 	public double getHeight() {
 		return this.height;
+
+	@Override
+	public double ReturnBaseArea() {
+		return Math.PI * radius * radius;
+
 	}
 
 }

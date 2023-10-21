@@ -31,5 +31,9 @@ public class PentagonalPrism extends shapes {
 	public double getHeight() {
 		return this.height;
 	}
-
+  
+  //May or may not be necessary
+	public double ReturnBaseArea() {
+		return (ReturnBase());
+	}
 }
