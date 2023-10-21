@@ -60,7 +60,7 @@ public class SortingUtility {
 		}
 	}
 
-	public <T extends shapes> void mergeSort(T[] arr) {
+	public static <T extends shapes> void mergeSort(T[] arr) {
 		if (arr.length > 1) {
 			int mid = arr.length / 2;
 

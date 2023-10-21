@@ -2,11 +2,15 @@ package util;
 
 import java.io.File;
 
+import shapes.shapes;
+import sorting.Sort;
+import sorting.SortingUtility;
+
 public class CommandLine {
 	//String input = System.console().readLine();
 	public static void main(String[] args) {
-		File filePath = null;//so it does not cause undefined error or something
-		String sortby = null;//What to sort by, v, h, base
+		String filePath = null;//so it does not cause undefined error or something
+		String sortby = null;//What to sort by, a, h, b
 		String method = null;//What sorting method to use
 		if(args.length != 3) {
 			System.out.println("This program need 3 inputs, example 'java -jar sort.jar -ffile_name -tv -sb'");
@@ -26,7 +30,7 @@ public class CommandLine {
 				if(filePath != null) {
 					System.out.println("You already given the file or path  atleast twice, program will attempt to use the secound one");
 				}
-				filePath = new File(arg.substring(2));
+				filePath = arg.substring(2);
 			}else if(ch == '-' && (ch2 == 's' || ch2 == 'S')) {
 				if(method != null) {
 					System.out.println("You already given the methid atleast twice, program will attempt to use the secound one");
@@ -60,71 +64,131 @@ public class CommandLine {
 		//Print path or file
 		System.out.println(filePath);
 		
+		
+		shapes[] theShapes;
 		//Initialize the array of object here
 		try {
-			
+			theShapes = Sort.getShapes(filePath);
 		}
 		catch(Exception e){
 			System.out.println("Error, something seems to be wrong with the file you provide, please try another one");
 		}
+		
+		theShapes = Sort.getShapes(filePath);
 		
 		//time how long it takes to sort
 		long startTime = System.nanoTime();
 		//based on selected method use if else to take, also time it
 		if(method == "b") {
 			if(sortby == "b") {
+				for(shapes i:theShapes) {
+					i.sortingBy = "b";
+					
+				}
 			
 			}else if(sortby == "h") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "h";
+					
+				}
 			}else if(sortby == "a") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "a";
+					
+				}
 			}
-			
+			SortingUtility.bubbleSort(theShapes);
 		}else if(method == "i") {
 			if(sortby == "b") {
+				for(shapes i:theShapes) {
+					i.sortingBy = "b";
+					
+				}
 				
 			}else if(sortby == "h") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "h";
+					
+				}
 			}else if(sortby == "a") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "a";
+					
+				}
 			}
-			
+			SortingUtility.insertionSort(theShapes);
 		}else if(method == "s") {
 			if(sortby == "b") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "b";
+					
+				}
 			}else if(sortby == "h") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "h";
+					
+				}
 			}else if(sortby == "a") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "a";
+					
+				}
 			}
-			
+			SortingUtility.selectionSort(theShapes);
 		}else if(method == "m") {
 			if(sortby == "b") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "b";
+					
+				}
 			}else if(sortby == "h") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "h";
+					
+				}
 			}else if(sortby == "a") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "a";
+					
+				}
 			}
-			
+			SortingUtility.mergeSort(theShapes);
 		}else if(method == "q") {
 			if(sortby == "b") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "b";
+					
+				}
 			}else if(sortby == "h") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "h";
+					
+				}
 			}else if(sortby == "a") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "a";
+					
+				}
 			}
-			
+			SortingUtility.quickSort(theShapes);
 		}else if(method == "z") {
 			if(sortby == "b") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "b";
+					
+				}
 			}else if(sortby == "h") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "h";
+					
+				}
 			}else if(sortby == "a") {
-				
+				for(shapes i:theShapes) {
+					i.sortingBy = "a";
+					
+				}
 			}
-			
+			//SortingUtility.customSort(theShapes);
 		}
 			//if either one of them does not match, print error here, else print I think
 		
@@ -139,9 +203,11 @@ public class CommandLine {
 		
 		//print first
 		int counter = 0;
-		//for items in list{
-		// counter ++;
-			//if (counter == 1000) {print(item at that value)}
-		//}
+		for(shapes i:theShapes){
+		counter ++;
+			if (counter == 1000) {
+				System.out.println("Replace with the corrsponding item for the thousandth object");
+			}
+		}
 	}
 }
