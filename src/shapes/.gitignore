@@ -4,4 +4,7 @@
 /SquarePrism.class
 /PentagonalPrism.class
 /shapes.class
-/shapes$BaseAreaAndVolumeComparator.class
+/OctagonalPrism.class
+/Cone.class
+/Cylinder.class
+/Pyramid.class
