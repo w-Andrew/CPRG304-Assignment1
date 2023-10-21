@@ -70,7 +70,7 @@ public class SortingUtility {
 
     }
 
-
+    //For heapsort
     public static <T extends Comparable<T>> void customSort(T[] arr) {
     	//length of array
     	int lenght = arr.length;
@@ -87,6 +87,7 @@ public class SortingUtility {
     	}
 
     }
+    //For heapsort
     public static <T extends Comparable<T>> void heapify(T[] arr, int lenght, int i) {
     	int largest = i;
     	int left = 2 * i + 1;
