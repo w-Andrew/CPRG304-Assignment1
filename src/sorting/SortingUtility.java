@@ -1,5 +1,6 @@
 package sorting;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import shapes.shapes;
@@ -144,8 +145,41 @@ public class SortingUtility {
 		return i;
 	}
 
-	public static <T extends Comparable<T>> void customSort(T[] arr) {
+	//For heapsort
+    public static <T extends Comparable<T>> void customSort(T[] arr) {
+    	//length of array
+    	int lenght = arr.length;
+    	
+    	for(int i = lenght/2 -1; i>= 0; i--) {
+    		heapify(arr, lenght, i);
+    	}
+    	for(int i = lenght/2 - 1; i>= 0; i--) {
+    		T swap = arr[0];
+    		arr[0] = arr[i];
+    		arr[i] = swap;
+    		
+    		heapify(arr, i, 0);
+    	}
 
-	}
-
+    }
+    //For heapsort
+    public static <T extends Comparable<T>> void heapify(T[] arr, int lenght, int i) {
+    	int largest = i;
+    	int left = 2 * i + 1;
+    	int right = 2* i + 2;
+    	if(left < lenght && ((arr[left]).compareTo(arr[largest]) >0)) {
+    		largest = left;  
+    	}
+    	if(left < lenght && (arr[right].compareTo(arr[largest]) >0)) {
+       		largest = right;
+    	}
+    	if(largest != 1) {
+    		T swap = arr[i];
+    		arr[i] = arr[largest];
+    		arr[largest] = swap;
+    		
+    		heapify(arr, lenght, largest);
+    	}
+    	
+    }
 }

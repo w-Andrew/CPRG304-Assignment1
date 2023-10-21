@@ -3,6 +3,8 @@ package shapes;
 public abstract class shapes implements Comparable<shapes> {
 	double height;
 
+	String sortingBy;
+
 	public double ReturnSurfaceArea() {
 		return 0;
 	}
